@@ -1,0 +1,41 @@
+{
+  "vaat": {
+    "creche_integral": 1.90,
+    "creche_parcial": 1.50,
+    "pre_escola_integral": 1.88,
+    "pre_escola_parcial": 1.45,
+    "anos_iniciais_urbano": 1.00,
+    "anos_iniciais_rural": 1.15,
+    "anos_finais_urbano": 1.10,
+    "anos_finais_rural": 1.25,
+    "ensino_medio_urbano": 1.25,
+    "eja": 0.80,
+    "educacao_especial": 1.40
+  },
+  "vaaf": {
+    "creche_integral": 1.55,
+    "creche_parcial": 1.30,
+    "pre_escola_integral": 1.50,
+    "pre_escola_parcial": 1.25,
+    "anos_iniciais_urbano": 1.00,
+    "anos_iniciais_rural": 1.15,
+    "anos_finais_urbano": 1.10,
+    "anos_finais_rural": 1.20,
+    "ensino_medio_urbano": 1.30,
+    "eja": 0.80,
+    "educacao_especial": 1.40
+  },
+  "ajustes_nse": {
+    "descricao": "Fator multiplicativo baseado no NSE do município",
+    "formula": "0.95 + (NSE / 1000)",
+    "range": [0.95, 1.05]
+  },
+  "ajustes_drec": {
+    "descricao": "Fator multiplicativo baseado na capacidade fiscal local",
+    "range": [0.965, 1.035]
+  },
+  "complementacao_total": {
+    "vaat_2025": 24200000000,
+    "vaaf_2025": 26900000000
+  }
+}

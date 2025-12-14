@@ -1,0 +1,117 @@
+[
+  {
+    "codigo_ibge": "4101804",
+    "nome": "Apucarana",
+    "uf": "PR",
+    "populacao": 136234,
+    "nse": 50.2,
+    "drec": 0.98,
+    "elegivel_vaat": true,
+    "elegivel_vaaf": true,
+    "matriculas": {
+      "creche_integral": 1200,
+      "creche_parcial": 800,
+      "pre_escola_integral": 900,
+      "pre_escola_parcial": 1100,
+      "anos_iniciais_urbano": 4500,
+      "anos_iniciais_rural": 300,
+      "anos_finais_urbano": 3200,
+      "anos_finais_rural": 200,
+      "ensino_medio_urbano": 2800,
+      "eja": 600,
+      "educacao_especial": 150
+    }
+  },
+  {
+    "codigo_ibge": "1200013",
+    "nome": "Acrelândia",
+    "uf": "AC",
+    "populacao": 15256,
+    "nse": 42.8,
+    "drec": 0.965,
+    "elegivel_vaat": true,
+    "elegivel_vaaf": true,
+    "matriculas": {
+      "creche_integral": 180,
+      "creche_parcial": 120,
+      "pre_escola_integral": 150,
+      "pre_escola_parcial": 180,
+      "anos_iniciais_urbano": 800,
+      "anos_iniciais_rural": 420,
+      "anos_finais_urbano": 600,
+      "anos_finais_rural": 280,
+      "ensino_medio_urbano": 450,
+      "eja": 120,
+      "educacao_especial": 25
+    }
+  },
+  {
+    "codigo_ibge": "3550308",
+    "nome": "São Paulo",
+    "uf": "SP",
+    "populacao": 12325232,
+    "nse": 58.4,
+    "drec": 1.035,
+    "elegivel_vaat": false,
+    "elegivel_vaaf": false,
+    "matriculas": {
+      "creche_integral": 45000,
+      "creche_parcial": 35000,
+      "pre_escola_integral": 38000,
+      "pre_escola_parcial": 42000,
+      "anos_iniciais_urbano": 280000,
+      "anos_iniciais_rural": 1500,
+      "anos_finais_urbano": 220000,
+      "anos_finais_rural": 800,
+      "ensino_medio_urbano": 180000,
+      "eja": 35000,
+      "educacao_especial": 8500
+    }
+  },
+  {
+    "codigo_ibge": "2111300",
+    "nome": "São Luís",
+    "uf": "MA",
+    "populacao": 1108975,
+    "nse": 48.6,
+    "drec": 0.975,
+    "elegivel_vaat": true,
+    "elegivel_vaaf": true,
+    "matriculas": {
+      "creche_integral": 8500,
+      "creche_parcial": 6200,
+      "pre_escola_integral": 7800,
+      "pre_escola_parcial": 8900,
+      "anos_iniciais_urbano": 52000,
+      "anos_iniciais_rural": 2800,
+      "anos_finais_urbano": 41000,
+      "anos_finais_rural": 1900,
+      "ensino_medio_urbano": 32000,
+      "eja": 6500,
+      "educacao_especial": 1200
+    }
+  },
+  {
+    "codigo_ibge": "1502400",
+    "nome": "Bragança",
+    "uf": "PA",
+    "populacao": 127662,
+    "nse": 45.3,
+    "drec": 0.970,
+    "elegivel_vaat": true,
+    "elegivel_vaaf": true,
+    "matriculas": {
+      "creche_integral": 950,
+      "creche_parcial": 720,
+      "pre_escola_integral": 880,
+      "pre_escola_parcial": 1050,
+      "anos_iniciais_urbano": 6800,
+      "anos_iniciais_rural": 3200,
+      "anos_finais_urbano": 5400,
+      "anos_finais_rural": 2100,
+      "ensino_medio_urbano": 3800,
+      "eja": 850,
+      "educacao_especial": 180
+    }
+  }
+]
