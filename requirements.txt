@@ -1,0 +1,7 @@
+# Requirements for Streamlit Cloud deployment
+# Locally, use: uv pip install -e .
+
+streamlit>=1.40.0
+anthropic>=0.40.0
+pandas>=2.2.0
+plotly>=5.24.0
