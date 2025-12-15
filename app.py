@@ -319,48 +319,48 @@ def main():
             if 'chat_history' not in st.session_state:
                 st.session_state['chat_history'] = []
 
-                # Exibe histórico
-                for msg in st.session_state['chat_history']:
-                    with st.chat_message(msg['role']):
-                        st.markdown(msg['content'])
+            # Exibe histórico
+            for msg in st.session_state['chat_history']:
+                with st.chat_message(msg['role']):
+                    st.markdown(msg['content'])
 
-                # Input do usuário
-                if prompt := st.chat_input("Faça uma pergunta sobre FUNDEB..."):
-                    # Adiciona mensagem do usuário
-                    st.session_state['chat_history'].append({
-                        'role': 'user',
-                        'content': prompt
-                    })
+            # Input do usuário
+            if prompt := st.chat_input("Faça uma pergunta sobre FUNDEB..."):
+                # Adiciona mensagem do usuário
+                st.session_state['chat_history'].append({
+                    'role': 'user',
+                    'content': prompt
+                })
 
-                    with st.chat_message("user"):
-                        st.markdown(prompt)
+                with st.chat_message("user"):
+                    st.markdown(prompt)
 
-                    # Gera resposta
-                    with st.chat_message("assistant"):
-                        with st.spinner("Pensando..."):
-                            contexto = st.session_state.get('ultimo_resultado')
+                # Gera resposta
+                with st.chat_message("assistant"):
+                    with st.spinner("Pensando..."):
+                        contexto = st.session_state.get('ultimo_resultado')
 
-                            resposta = chat_agent.gerar_resposta(
-                                prompt,
-                                contexto_municipio=contexto,
-                                historico=[
-                                    {"role": m['role'], "content": m['content']}
-                                    for m in st.session_state['chat_history'][:-1]
-                                ]
-                            )
+                        resposta = chat_agent.gerar_resposta(
+                            prompt,
+                            contexto_municipio=contexto,
+                            historico=[
+                                {"role": m['role'], "content": m['content']}
+                                for m in st.session_state['chat_history'][:-1]
+                            ]
+                        )
 
-                            st.markdown(resposta)
+                        st.markdown(resposta)
 
-                            # Adiciona ao histórico
-                            st.session_state['chat_history'].append({
-                                'role': 'assistant',
-                                'content': resposta
-                            })
+                        # Adiciona ao histórico
+                        st.session_state['chat_history'].append({
+                            'role': 'assistant',
+                            'content': resposta
+                        })
 
-                # Botão limpar histórico
-                if st.button("🗑️ Limpar Histórico"):
-                    st.session_state['chat_history'] = []
-                    st.rerun()
+            # Botão limpar histórico
+            if st.button("🗑️ Limpar Histórico"):
+                st.session_state['chat_history'] = []
+                st.rerun()
 
     # ========== TAB 3: COMPARAÇÕES ==========
     with tab3:
