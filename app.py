@@ -74,7 +74,15 @@ def inicializar_calculadora():
 
 def inicializar_chat_agent():
     """Inicializa agente de chat"""
+    # Tenta pegar da session_state (input do usuário) ou dos secrets do Streamlit Cloud
     api_key = st.session_state.get('anthropic_api_key')
+    if not api_key:
+        # Tenta pegar dos secrets do Streamlit Cloud
+        try:
+            api_key = st.secrets.get("ANTHROPIC_API_KEY")
+        except:
+            pass
+
     if api_key:
         return ChatAgentFUNDEB(api_key=api_key)
     return None
@@ -301,16 +309,15 @@ def main():
     with tab2:
         st.markdown("### 💬 Assistente Conversacional FUNDEB")
 
-        # Verifica se API está configurada
-        if not st.session_state.get('anthropic_api_key'):
+        # Verifica se API está configurada (session_state ou secrets)
+        chat_agent = inicializar_chat_agent()
+
+        if not chat_agent:
             st.warning("⚠️ Configure sua chave API da Anthropic na barra lateral para usar o chat.")
         else:
-            chat_agent = inicializar_chat_agent()
-
-            if chat_agent:
-                # Inicializa histórico
-                if 'chat_history' not in st.session_state:
-                    st.session_state['chat_history'] = []
+            # Inicializa histórico
+            if 'chat_history' not in st.session_state:
+                st.session_state['chat_history'] = []
 
                 # Exibe histórico
                 for msg in st.session_state['chat_history']:
