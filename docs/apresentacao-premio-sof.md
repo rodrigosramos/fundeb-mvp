@@ -25,7 +25,7 @@ O FUNDEB Fácil é uma aplicação web inovadora que transforma a complexidade r
 
 **Impacto:** 5.568 municípios, 47 milhões de estudantes, R$ 339 bilhões sob gestão mais transparente.
 
-\newpage
+
 
 # 1. O PROBLEMA: QUANDO A COMPLEXIDADE COMPROMETE BILHÕES
 
@@ -158,7 +158,7 @@ O FUNDEB é essencialmente um **problema de projeção orçamentária** baseada 
 
 O FUNDEB Fácil não busca criar novos dados, mas sim **tornar os dados existentes compreensíveis e projetáveis**. Quando um gestor consegue simular "e se eu aumentar matrículas em educação integral em 15%?", ele está fazendo exatamente o que o edital busca: **estimando projeções orçamentárias de médio prazo** para fundamentar decisões de gestão pública.
 
-\newpage
+
 
 # 2. A SOLUÇÃO: FUNDEB FÁCIL
 
@@ -221,7 +221,6 @@ O FUNDEB Fácil utiliza arquitetura de **multiagentes com LangGraph**, framework
 │   │ Agente Conversacional           │   │
 │   │ - Explicações pedagógicas       │   │
 │   │ - RAG sobre legislação          │   │
-│   │ - Comparações entre municípios  │   │
 │   │ - Sugestões de otimização       │   │
 │   └─────────────────────────────────┘   │
 └─────────────────────────────────────────┘
@@ -246,7 +245,7 @@ O FUNDEB Fácil utiliza arquitetura de **multiagentes com LangGraph**, framework
 | **RAG** | LangChain + ChromaDB | Consulta sobre base legal |
 | **Banco** | SQLite | Persistência local (robustez offline) |
 | **Dados** | Pandas | Manipulação de dados tabulares |
-| **Visualização** | Plotly | Gráficos interativos |
+
 
 **Todas as tecnologias são open-source ou com licenças permissivas**, garantindo viabilidade de manutenção de longo prazo sem custos de licenciamento.
 
@@ -307,59 +306,7 @@ O FUNDEB Fácil utiliza arquitetura de **multiagentes com LangGraph**, framework
    - Todos os detalhes calculados
    - Pronto para análise externa
 
-### Módulo 2: Visualizações Interativas
-
-**1. Gráfico de Barras - Impacto dos Ponderadores:**
-   - Comparação lado-a-lado:
-     - Matrículas brutas (azul claro)
-     - Matrículas ajustadas VAAT (azul escuro)
-   - Evidencia o efeito multiplicativo dos ponderadores
-   - Interativo (hover mostra valores exatos)
-
-**2. Gráfico de Pizza - Composição das Matrículas Ajustadas:**
-   - Distribuição percentual por etapa/modalidade
-   - Revela quais segmentos têm maior peso após ponderadores
-   - Cores distintas para fácil identificação
-
-**Todas as visualizações são:**
-- ✅ Interativas (zoom, hover, download)
-- ✅ Responsivas (adaptam-se ao tamanho da tela)
-- ✅ Exportáveis (PNG, SVG)
-
-### Módulo 3: FAQ Educativo
-
-**Perguntas Frequentes Implementadas:**
-
-1. **"O que é VAAT?"**
-   - Definição completa
-   - Objetivo da modalidade
-   - Valores 2025
-   - Municípios beneficiados
-
-2. **"O que é VAAF?"**
-   - Explicação detalhada
-   - Diferença em relação ao VAAT
-   - Critérios de elegibilidade
-
-3. **"Como são aplicados os ponderadores?"**
-   - Explicação passo-a-passo da fórmula
-   - Exemplo numérico concreto
-   - Fundamentação legal
-
-**Estilo das Respostas:**
-- Linguagem clara e didática
-- Exemplos concretos
-- Referências à legislação
-- Valores atualizados 2025
-
-### Módulo 4: Assistente com IA (Roadmap - Em Desenvolvimento)
-
-**Status Atual no MVP:**
-- Interface preparada
-- Indicação clara de "Em desenvolvimento"
-- Roadmap de funcionalidades planejadas exibido
-
-**Funcionalidades Planejadas (Próximas Iterações):**
+### Módulo 2: Assistente com IA (Roadmap - Em Desenvolvimento)
 
 **Modo 1 - Explicação Contextual:**
 > "Como chegamos em R$ 2,65 milhões para Apucarana?"
@@ -471,7 +418,7 @@ O FUNDEB Fácil utiliza arquitetura de **multiagentes com LangGraph**, framework
 - ✅ Um agente calcula (determinístico complexo)
 - ✅ Outro explica (generativo adaptativo)
 
-**Por que LLM (Claude 3.5)?**
+**Por que LLM?**
 - ✅ Explicações em linguagem natural adaptativas
 - ✅ Decomposição de cascatas de multiplicação
 - ✅ Impossível com templates estáticos
@@ -487,13 +434,12 @@ O FUNDEB Fácil utiliza arquitetura de **multiagentes com LangGraph**, framework
 - ✅ LangGraph + LLM + RAG + consciência de contexto
 - ✅ Fronteira de inovação em governo digital
 
-\newpage
 
 # 3. DEMONSTRAÇÃO PRÁTICA
 
 ## 3.1 Acesso à Aplicação
 
-**URL:** https://fundeb-facil.streamlit.app/
+**URL:** (https://fundeb-mvp.streamlit.app/)
 
 **Requisitos:**
 - Qualquer navegador moderno
@@ -514,8 +460,8 @@ O FUNDEB Fácil utiliza arquitetura de **multiagentes com LangGraph**, framework
 
 **Informações Exibidas Automaticamente:**
 - População: 136,234 habitantes
-- NSE: 50.2 (médio)
-- DRec: 0.93 (ligeiramente abaixo da média)
+- NSE: 1.032 
+- DRec: 0.983 
 
 ### Passo 2: Visualização das Matrículas
 
@@ -584,14 +530,13 @@ O FUNDEB Fácil utiliza arquitetura de **multiagentes com LangGraph**, framework
 
 ```
 ┌──────────────────────────┬──────────────────────────┐
-│ Fator NSE: 1.020         │ Fator DRec: 0.990        │
-│ NSE do município: 50.2   │ DRec do município: 0.93  │
+│ Fator NSE: 1.033         │ Fator DRec: 0.983        │
 └──────────────────────────┴──────────────────────────┘
 ```
 
 **Explicação:**
-- NSE médio (50.2) → fator 1.020 (pequeno bônus)
-- DRec abaixo da média (0.93) → fator 0.990 (pequena penalização)
+- NSE → fator 1.033 (pequeno bônus)
+- DRec abaixo da média → fator 0.983 (pequena penalização)
 - Fatores se compensam parcialmente
 
 ### Passo 5: Análise Detalhada
@@ -610,33 +555,8 @@ O FUNDEB Fácil utiliza arquitetura de **multiagentes com LangGraph**, framework
 - Matrículas ajustadas VAAT = **2.479** (quase o **dobro** das brutas!)
 - Efeito multiplicativo dos ponderadores é claro
 
-### Passo 6: Visualizações Gráficas
 
-#### Gráfico 1: Barras - Impacto dos Ponderadores
-
-**Eixo X:** Etapas/Modalidades
-**Eixo Y:** Quantidade de alunos
-
-**Duas barras por categoria:**
-- Azul claro: Matrículas brutas
-- Azul escuro: Matrículas ajustadas VAAT
-
-**Insight Visual:**
-- Creche integral: barra azul escuro **muito maior** que azul claro
-- Anos iniciais urbanos: barras **similares** (ponderador ~1,00)
-- Evidencia onde os ponderadores mais impactam
-
-#### Gráfico 2: Pizza - Composição
-
-**Fatias proporcionais:**
-- Anos Iniciais Urbano: 35% (maior fatia, muitas matrículas)
-- Creche Integral: 15% (**peso desproporcional** ao número bruto)
-- EF Anos Finais: 28%
-- Etc.
-
-**Insight:** Mostra que creche integral, apesar de ter menos alunos, tem peso significativo no total ajustado.
-
-### Passo 7: Export para Análise Externa
+### Passo 6: Export para Análise Externa
 
 **Botão:** "⬇️ Exportar Detalhamento (CSV)"
 
@@ -647,7 +567,7 @@ O FUNDEB Fácil utiliza arquitetura de **multiagentes com LangGraph**, framework
 - Pronto para import em Excel, Power BI, etc.
 - Permite análises customizadas
 
-### Passo 8: FAQ Educativo
+### Passo 7: FAQ Educativo
 
 **Tab "💬 Chat Inteligente"**
 
@@ -1040,7 +960,6 @@ Quando gestor compreende que:
 
 **O FUNDEB Fácil entrega exatamente o que o edital busca.**
 
-\newpage
 
 # 5. VIABILIDADE: SUSTENTABILIDADE TÉCNICA, FINANCEIRA E OPERACIONAL
 
@@ -1399,15 +1318,14 @@ O FUNDEB Fácil está pronto. A URL está no ar. O código é aberto. A tecnolog
 
 ---
 
-\newpage
 
 # ANEXOS
 
 ## A. Informações Técnicas
 
-**URL da Aplicação:** https://fundeb-facil.streamlit.app/
+**URL da Aplicação:** https://fundeb-mvp.streamlit.app/
 
-**Repositório GitHub:** https://github.com/rodrigosramos/fundeb-facil
+**Repositório GitHub:** https://github.com/rodrigosramos/fundeb-mvp
 
 **Licença:** MIT (Código Aberto)
 
@@ -1441,11 +1359,10 @@ O FUNDEB Fácil está pronto. A URL está no ar. O código é aberto. A tecnolog
 
 **Autor:** Rodrigo Santos Ramos
 
-**Email:** [inserir email]
+**Email:** rodrigo.ramos@senado.leg.br
 
 **GitHub:** https://github.com/rodrigosramos
 
-**LinkedIn:** [inserir LinkedIn]
 
 ---
 
